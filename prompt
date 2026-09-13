@@ -1,0 +1,370 @@
+
+You are a senior Python developer, Streamlit UI/UX designer, and API integration engineer.
+
+Your task is to build a complete, professional AI Translation Web Application.
+
+## Project Goal
+
+Create a clean translation interface where users can:
+
+1. Enter text that they want to translate.
+2. Select a source language.
+3. Select a target language.
+4. Send the text to a translation API.
+5. Receive the translated response.
+6. Clearly display the translated text.
+7. Copy the translated text with a Copy button.
+8. Listen to the translated text using Text-to-Speech.
+9. View the API response for debugging/transparency.
+
+## Required Technology
+
+Use ONLY the following main technologies:
+
+- Python
+- Streamlit
+- Google Translate API OR Microsoft Translator API
+- gTTS (Google Text-to-Speech) for voice
+- Pyperclip for copying text
+- Requests for HTTP API communication
+
+Do not use React, JavaScript frameworks, Flask, Django, or other frontend frameworks.
+
+## UI/UX Requirements
+
+Create a professional, modern, simple interface.
+
+Use ONE professional color palette only. Do not mix many colors.
+
+Recommended color palette:
+
+- Primary: #1E3A5F
+- Secondary: #EEF4F9
+- Background: #F5F7FA
+- White: #FFFFFF
+- Text: #1F2937
+- Muted text: #64748B
+- Border: #D9E2EC
+
+The interface should look like a professional SaaS application.
+
+Do NOT use:
+- Bright rainbow colors
+- Excessive gradients
+- Too many decorative elements
+- Cluttered layouts
+- Unnecessary animations
+
+## Page Layout
+
+Create the following structure:
+
+--------------------------------------------------
+              🌐 AI TRANSLATOR
+       Fast and simple text translation
+--------------------------------------------------
+
+API Configuration
+
+Google Translation API Key
+[***********************]
+
+--------------------------------------------------
+
+Language Selection
+
+Source Language          Target Language
+[ Auto Detect ▼ ]        [ English ▼ ]
+
+--------------------------------------------------
+
+Text to Translate
+
+[                                      ]
+[                                      ]
+[                                      ]
+
+              [ Translate Text ]
+
+--------------------------------------------------
+
+Translated Text
+
+[                                      ]
+[     Translated result appears here  ]
+[                                      ]
+
+[ Copy Text ]       [ 🔊 Text to Speech ]
+
+--------------------------------------------------
+
+API Response
+
+{
+   translation API response
+}
+
+--------------------------------------------------
+
+## Language Selection
+
+Include at least these languages:
+
+- Auto Detect
+- English
+- Urdu
+- Arabic
+- French
+- German
+- Spanish
+- Italian
+- Portuguese
+- Russian
+- Chinese
+- Japanese
+- Korean
+- Hindi
+- Turkish
+- Dutch
+- Bengali
+
+Use proper language codes when communicating with the translation API.
+
+## Translation API
+
+Use Google Cloud Translation API.
+
+The application should:
+
+1. Read the API key.
+2. Read the input text.
+3. Read the selected source language.
+4. Read the selected target language.
+5. Send an HTTP POST request to Google Translation API.
+6. Receive the JSON response.
+7. Extract the translated text.
+8. Display the translated text clearly.
+9. Display the complete API response in an expandable/debug section.
+
+If source language is "Auto Detect", do not send an invalid source language. Allow the API to detect the source language.
+
+## Error Handling
+
+Handle errors professionally.
+
+Examples:
+
+- Empty text:
+  "Please enter some text to translate."
+
+- Missing API key:
+  "Please enter your Google Translation API key."
+
+- Invalid API key:
+  "Translation API authentication failed."
+
+- API failure:
+  "Unable to translate the text. Please try again."
+
+- Network failure:
+  "Unable to connect to the translation service."
+
+Never expose unnecessary technical errors directly to normal users.
+
+For developers/debugging, provide the detailed API response inside an expandable section.
+
+## Copy Feature
+
+Use pyperclip.
+
+Add a clearly visible:
+
+[ 📋 Copy Text ]
+
+button.
+
+When clicked:
+
+- Copy the translated text to the clipboard.
+- Show a small success message such as:
+  "Translated text copied!"
+
+If clipboard functionality is unavailable in the current environment, handle it gracefully without crashing the application.
+
+## Text-to-Speech
+
+Use gTTS.
+
+Add:
+
+[ 🔊 Text to Speech ]
+
+When clicked:
+
+1. Take the translated text.
+2. Detect/use the target language code.
+3. Generate an MP3 using gTTS.
+4. Play the generated audio using Streamlit's audio component.
+
+Handle unsupported language codes gracefully.
+
+Do not generate speech when there is no translated text.
+
+## State Management
+
+Use Streamlit session state so that:
+
+- Translation remains visible after button clicks.
+- Copy button does not erase the translation.
+- Text-to-speech does not erase the translation.
+- API response remains available.
+
+## Security
+
+Do NOT hard-code the API key into the Python source code.
+
+Prefer this approach for production:
+
+st.secrets["GOOGLE_TRANSLATE_API_KEY"]
+
+However, for easy testing, you may also allow the user to enter an API key through a password-type Streamlit input.
+
+Explain how to configure `.streamlit/secrets.toml`.
+
+Example:
+
+[google]
+api_key = "YOUR_API_KEY"
+
+Never print the API key in the API response or UI.
+
+## Code Quality
+
+Write clean, beginner-friendly Python.
+
+Use functions such as:
+
+- translate_text()
+- text_to_speech()
+- copy_to_clipboard()
+
+Add comments explaining important sections.
+
+Use proper exception handling.
+
+Avoid unnecessary dependencies.
+
+## Required Files
+
+Generate:
+
+1. app.py
+2. requirements.txt
+3. README.md
+4. .gitignore
+5. .streamlit/secrets.toml.example
+
+## requirements.txt
+
+Include:
+
+streamlit
+requests
+gTTS
+pyperclip
+
+## README.md
+
+Explain:
+
+1. What the application does.
+2. Project structure.
+3. How to install Python dependencies.
+4. How to configure the Google Translation API.
+5. How to configure Streamlit secrets.
+6. How to run the application.
+7. How to use translation.
+8. How Copy Text works.
+9. How Text-to-Speech works.
+10. Common troubleshooting steps.
+
+## .gitignore
+
+Include:
+
+__pycache__/
+*.pyc
+.env
+.streamlit/secrets.toml
+venv/
+.venv/
+
+Never allow API credentials to be committed to Git.
+
+## Professional Design Requirements
+
+Use Streamlit custom CSS.
+
+Make the application:
+
+- Clean
+- Responsive
+- Centered
+- Professional
+- Easy to read
+- Accessible
+- Minimal
+- Consistent
+
+Use cards/containers where appropriate.
+
+Use one consistent blue/navy color theme.
+
+Buttons should use the same primary color.
+
+Do not use random colors for different buttons.
+
+Use appropriate spacing and typography.
+
+## Accessibility
+
+Make the interface easy to use.
+
+Include:
+
+- Clear labels
+- Large text area
+- Readable translated output
+- Copy functionality
+- Text-to-speech functionality
+- Clear success/error messages
+- Good contrast between text and background
+
+## Final Output
+
+Provide the complete working source code.
+
+Start with the project structure.
+
+Then provide:
+
+1. app.py
+2. requirements.txt
+3. .streamlit/secrets.toml.example
+4. .gitignore
+5. README.md
+6. Installation commands
+7. Run command
+
+The final application must work with:
+
+python
+streamlit
+Google Translation API
+gTTS
+pyperclip
+
+Do not provide pseudocode.
+
+Provide production-quality, runnable Python code.
+```
