@@ -2,6 +2,10 @@
 
 A professional Streamlit translator that uses free services through `deep-translator`. Google Translator is the primary service, with MyMemory as a fallback for manually selected source languages. It requires no API key and no billing account.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=kashish309/codeALpha_ProjectName&branch=main&mainModule=app.py)
+
+Use the button above to deploy and open this app in Streamlit Community Cloud.
+
 ## Features
 
 - Translate text between 16 languages, with automatic source-language detection.
