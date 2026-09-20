@@ -4,9 +4,9 @@ A professional Streamlit translator that uses free services through `deep-transl
 
 [Open this project on GitHub](https://github.com/kashish309/codeALpha_ProjectName)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=kashish309/codeALpha_ProjectName&branch=main&mainModule=app.py)
+[![Deploy to Streamlit Community Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=kashish309/codeALpha_ProjectName&branch=main&mainModule=app.py)
 
-Use the button above to deploy and open this app in Streamlit Community Cloud.
+Use the button above to deploy the app and receive its live Streamlit URL. A permanent live URL is created by Streamlit Community Cloud after deployment.
 
 ## Features
 
