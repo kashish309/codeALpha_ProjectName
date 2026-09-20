@@ -2,9 +2,7 @@
 
 A professional Streamlit translator that uses free services through `deep-translator`. Google Translator is the primary service, with MyMemory as a fallback for manually selected source languages. It requires no API key and no billing account.
 
-[Open this project on GitHub](https://github.com/kashish309/codeALpha_ProjectName)
 
-[![Deploy to Streamlit Community Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=kashish309/codeALpha_ProjectName&branch=main&mainModule=app.py)
 
 Use the button above to deploy the app and receive its live Streamlit URL. A permanent live URL is created by Streamlit Community Cloud after deployment.
 
