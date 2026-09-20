@@ -2,6 +2,8 @@
 
 A professional Streamlit translator that uses free services through `deep-translator`. Google Translator is the primary service, with MyMemory as a fallback for manually selected source languages. It requires no API key and no billing account.
 
+view: AI language Translation ( http://localhost:8501.)
+
 
 
 Use the button above to deploy the app and receive its live Streamlit URL. A permanent live URL is created by Streamlit Community Cloud after deployment.
